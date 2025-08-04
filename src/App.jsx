@@ -3,6 +3,7 @@ import AppRoutes from "./router";
 import Navbar from "./components/Navbar";
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import OurServices from "./components/OurServices";
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
       <Navbar />
       <AppRoutes />
       <Contact />
+    <OurServices />
       <Footer />
+      
     </Router>
   );
 }

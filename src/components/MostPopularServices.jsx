@@ -3,10 +3,10 @@ import './MostPopularServices.css';
 
 const MostPopularServices = () => {
   const services = [
-    { name: 'Deep Cleaning', color: '#FFDDC1' },
-    { name: 'General Cleaning', color: '#D4F1F4' },
-    { name: 'Carpet Cleaning', color: '#F0E68C' },
-    { name: 'Window Cleaning', color: '#E6E6FA' },
+    { name: 'Deep Cleaning', color: 'rgba(255, 221, 193, 0.7)', size: '160px' },
+    { name: 'General Cleaning', color: 'rgba(212, 241, 244, 0.7)', size: '140px' },
+    { name: 'Carpet Cleaning', color: 'rgba(240, 230, 140, 0.7)', size: '180px' },
+    { name: 'Window Cleaning', color: 'rgba(230, 230, 250, 0.7)', size: '150px' },
   ];
 
   const servicesRef = useRef([]);
@@ -42,17 +42,26 @@ const MostPopularServices = () => {
 
   return (
     <div className="most-popular-services">
-      <h2 className="text-4xl font-bold text-gray-800 mb-4">
-        Most Popular Services</h2>
+      <h2 className="section-title">Most Popular Services</h2>
       <div className="services-container">
         {services.map((service, index) => (
           <div
             key={index}
             ref={(el) => (servicesRef.current[index] = el)}
             className="service-bubble"
-            style={{ backgroundColor: service.color }}
+            style={{ 
+              backgroundColor: service.color,
+              width: service.size,
+              height: service.size,
+              // Staggered alignment
+              alignSelf: index % 2 === 0 ? 'flex-start' : 'flex-end',
+              // Random slight rotation
+              transform: `rotate(${index % 2 === 0 ? '-3deg' : '2deg'})`
+            }}
           >
-            {service.name}
+            <div className="bubble-content">
+              {service.name}
+            </div>
           </div>
         ))}
       </div>

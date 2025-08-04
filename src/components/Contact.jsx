@@ -50,12 +50,12 @@ const Contact = () => {
           {/* Image Grid */}
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="../../public/images/cl1.jpg"
+              src="../images/cl1.jpg"
               alt="Worker 1"
               className="rounded-lg shadow-md object-cover h-40 w-full"
               />
             <img
-              src="../../public/images/cl2.jpg"
+              src="../images/cl2.jpg"
               alt="Worker 2"
               className="rounded-lg shadow-md object-cover h-40 w-full"
             />

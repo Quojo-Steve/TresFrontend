@@ -14,7 +14,6 @@ function App() {
       <OurServices />
       <MostPopularServices />
       <Contact />
-    <OurServices />
       <Footer />
     </Router>
   );

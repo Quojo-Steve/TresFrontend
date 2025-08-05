@@ -142,7 +142,7 @@ const Contact = () => {
               </li>
               <li className="flex items-start gap-3">
                 <FaEnvelope className="text-blue-600 mt-1" />
-                info@sparkleprocleaning.com
+                info@sheilacleaning.com
               </li>
             </ul>
           </div>

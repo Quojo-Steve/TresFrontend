@@ -134,15 +134,15 @@ const Contact = () => {
             <ul className="space-y-4 text-gray-700">
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-blue-600 mt-1" />
-                123 Clean Street, Ho - Volta Region, Ghana
+                Dubai, United Arab Emirates
               </li>
               <li className="flex items-start gap-3">
                 <FaPhoneAlt className="text-blue-600 mt-1" />
-                +233 50 123 4567
+                +971 50 123 4567
               </li>
               <li className="flex items-start gap-3">
                 <FaEnvelope className="text-blue-600 mt-1" />
-                info@sparkleprocleaning.com
+                info@sheilacleaningservices.com
               </li>
             </ul>
           </div>

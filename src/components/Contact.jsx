@@ -125,34 +125,33 @@ const Contact = () => {
 							/>
 						</div>
 					</div>
-
-					{/* Contact Info */}
-					<div
-						className={`bg-white p-6 rounded-xl shadow-md transition-all duration-1000 ease-out transform ${
-							isVisible
-								? "translate-y-0 opacity-100"
-								: "translate-y-8 opacity-0"
-						}`}
-						style={{ transitionDelay: "500ms" }}
-					>
-						<h3 className="text-xl font-bold text-gray-800 mb-4">
-							Contact Details
-						</h3>
-						<ul className="space-y-4 text-gray-700">
-							<li className="flex items-start gap-3">
-								<FaMapMarkerAlt className="text-blue-600 mt-1" />
-								123 Clean Street, Ho - Volta Region, Ghana
-							</li>
-							<li className="flex items-start gap-3">
-								<FaPhoneAlt className="text-blue-600 mt-1" />
-								+233 50 123 4567
-							</li>
-							<li className="flex items-start gap-3">
-								<FaEnvelope className="text-blue-600 mt-1" />
-								info@sparkleprocleaning.com
-							</li>
-						</ul>
-					</div>
+          {/* Contact Info */}
+          <div
+            className={`bg-white p-6 rounded-xl shadow-md transition-all duration-1000 ease-out transform ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-8 opacity-0"
+            }`}
+            style={{ transitionDelay: "500ms" }}
+          >
+            <h3 className="text-xl font-bold text-gray-800 mb-4">
+              Contact Details
+            </h3>
+            <ul className="space-y-4 text-gray-700">
+              <li className="flex items-start gap-3">
+                <FaMapMarkerAlt className="text-blue-600 mt-1" />
+                Dubai, United Arab Emirates
+              </li>
+              <li className="flex items-start gap-3">
+                <FaPhoneAlt className="text-blue-600 mt-1" />
+                +971 50 123 4567
+              </li>
+              <li className="flex items-start gap-3">
+                <FaEnvelope className="text-blue-600 mt-1" />
+                info@sheilacleaningservices.com
+              </li>
+            </ul>
+          </div>
 
 					{/* Map */}
 					<div

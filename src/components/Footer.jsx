@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Company Info */}
         <div>
-          <h3 className="text-2xl font-bold mb-2">SparklePro</h3>
+          <h3 className="text-2xl font-bold mb-2">SHEILA Cleaning Services</h3>
           <p className="text-gray-400">
             Professional cleaning services that make your space shine. Serving homes and businesses with care.
           </p>
@@ -52,7 +52,7 @@ const Footer = () => {
 
       {/* Bottom Line */}
       <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} SparklePro Cleaning Services. All rights reserved.
+        &copy; {new Date().getFullYear()} SHEILA Cleaning Services. All rights reserved.
       </div>
     </footer>
   );

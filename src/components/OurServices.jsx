@@ -1,6 +1,5 @@
 import React from "react";
 import { FaHome, FaBuilding, FaBoxOpen } from "react-icons/fa";
-import "./OurServices.css"; // for custom scrollbar-hiding CSS
 
 const services = [
 	{
@@ -51,7 +50,7 @@ export default function OurServices() {
 			</p>
 
 			<div
-				className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 max-w-6xl mx-auto place-items-center"
+				className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 max-w-6xl mx-auto place-items-center scrollbar-hide [scrollbar-width:none] [-ms-overflow-style:none]"
 				aria-label="Our services"
 			>
 				{services.map((service, index) => (

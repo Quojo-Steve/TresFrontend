@@ -38,7 +38,7 @@ const MostPopularServices = () => {
 
 	return (
 		<div
-			className="most-popular-services bg-cover bg-center"
+			className="most-popular-services bg-cover bg-center rounded-tl-3xl rounded-br-3xl"
 			style={{
 				backgroundImage: "url('/home-bg.jpg')",
 				backgroundPosition: "center center",

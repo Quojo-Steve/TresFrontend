@@ -47,7 +47,7 @@ const HowItWorks = () => {
           isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
         }`}
       >
-        <h2 className="text-4xl font-bold text-gray-800 mb-4 section-title">
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">
           How It Works
         </h2>
         <p className="text-gray-500 mb-10 max-w-xl mx-auto">
@@ -58,7 +58,7 @@ const HowItWorks = () => {
         {steps.map((step, idx) => (
           <div
             key={idx}
-            className={`w-full bg-white rounded-xl p-4 md:p-6 border border-blue-500 shadow-2xl hover:scale-105 transition-all duration-700 ease-out group overflow-hidden break-words transform ${
+            className={`w-full bg-white rounded-xl p-4 md:p-6 border border-sky-300 shadow-2xl hover:scale-105 transition-all duration-700 ease-out group overflow-hidden break-words transform ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-12 opacity-0"
@@ -68,7 +68,7 @@ const HowItWorks = () => {
             }}
           >
             <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-sky-300 to-sky-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                 {step.icon}
               </div>
             </div>

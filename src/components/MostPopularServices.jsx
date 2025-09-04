@@ -1,30 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
+import "./MostPopularServices.css";
 
 const MostPopularServices = () => {
 	const [isVisible, setIsVisible] = useState(false);
 	const sectionRef = useRef(null);
 
 	const services = [
-		{
-			name: "Deep Cleaning",
-			color: "rgba(255, 221, 193, 0.7)",
-			size: "160px",
-		},
-		{
-			name: "General Cleaning",
-			color: "rgba(212, 241, 244, 0.7)",
-			size: "140px",
-		},
-		{
-			name: "Carpet Cleaning",
-			color: "rgba(240, 230, 140, 0.7)",
-			size: "180px",
-		},
-		{
-			name: "Window Cleaning",
-			color: "rgba(230, 230, 250, 0.7)",
-			size: "150px",
-		},
+		{ name: "Deep Cleaning", size: "160px" },
+		{ name: "General Cleaning", size: "140px" },
+		{ name: "Carpet Cleaning", size: "180px" },
+		{ name: "Window Cleaning", size: "150px" },
 	];
 
 	useEffect(() => {
@@ -52,49 +37,38 @@ const MostPopularServices = () => {
 	}, []);
 
 	return (
-		<div className="text-center py-20 px-5 bg-gradient-to-br from-white to-white">
+		<div
+			className="most-popular-services bg-cover bg-center rounded-tl-3xl rounded-br-3xl"
+			style={{
+				backgroundImage: "url('/home-bg.jpg')",
+				backgroundPosition: "center center",
+				backgroundAttachment: "fixed"
+			}}
+		>
 			<div ref={sectionRef}>
 				<div
 					className={`transition-all duration-1000 ease-out transform ${
-						isVisible
-							? "translate-y-0 opacity-100"
-							: "translate-y-8 opacity-0"
+						isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
 					}`}
 				>
-					<h2 className="text-4xl font-bold text-gray-800 mb-12 relative inline-block after:content-[''] after:absolute after:bottom-[-10px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-20 after:h-1 after:bg-blue-600 after:rounded-full">
-						Most Popular Services
+					<h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-center text-white mb-12 px-4 drop-shadow-md">
+						Most <span className="text-sky-300">Popular Services</span>
 					</h2>
 				</div>
-				<div className="flex flex-wrap justify-center items-center gap-10 max-w-4xl mx-auto [perspective:1000px]">
+				<div className="services-container">
 					{services.map((service, index) => (
 						<div
 							key={index}
-							className={`
-                rounded-full flex justify-center items-center text-center font-semibold text-gray-800 
-                transition-all duration-500 ease-out transform 
-                backdrop-blur-lg bg-opacity-70 border border-white/30
-                shadow-lg hover:shadow-2xl hover:scale-110 hover:rotate-0 hover:z-10 hover:text-blue-900
-                ${
-					isVisible
-						? "opacity-100 translate-y-0"
-						: "opacity-0 translate-y-8"
-				}
-                relative overflow-hidden group
-                before:content-[''] before:absolute before:top-[-10%] before:left-[-10%] 
-                before:w-[120%] before:h-[120%] before:bg-gradient-radial 
-                before:from-white/80 before:to-transparent before:opacity-60 before:z-[-1]
-              `}
+							className={`service-bubble${isVisible ? " fade-in" : ""}`}
 							style={{
-								backgroundColor: service.color,
 								width: service.size,
 								height: service.size,
 								transitionDelay: `${index * 150}ms`,
-								transform: `rotate(${
-									index % 2 === 0 ? "-3deg" : "2deg"
-								})`,
+								transform: `rotate(${index % 2 === 0 ? "-3deg" : "2deg"})`,
+								// No backgroundColor, let CSS handle the glassmorphism
 							}}
 						>
-							<div className="p-5 z-[2] relative">
+							<div className="bubble-content">
 								{service.name}
 							</div>
 						</div>
